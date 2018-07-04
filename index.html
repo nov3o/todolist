@@ -6,28 +6,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="plugins/bootstrap.min.css">
   <link rel="stylesheet" href="static/style.css">
-  <script src="plugins/jquery.min.js"></script>
-  <script src="plugins/popper.min.js"></script>
-  <script src="plugins/bootstrap.min.js"></script>
+  <style>
+  	ul {
+  		min-height: 1px;
+  	}
+
+  	body {
+  		overflow-y: scroll; 
+  	}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
   <script src="static/script.js"></script>
 </head>
 <body>
-	<div class="container-fluid bg-success">
+	<div class="container-fluid bg-info">
 		<h1 class="display-1 p-2 pl-5">To-do list</h1>
 	</div>
 	<div class="container">
 		<div class="mb-3">
-			<button class="btn bg-success" data-toggle="collapse" data-target="#now"><h2 class="m-0">Now</h2></button>
+			<button class="btn bg-info" data-toggle="collapse"  data-target="#now"><h2 class="m-0">Now</h2></button>
 			<div id="now" class="collapse">
-				Im here)
+				<form class="my-2 ml-4 rounded d-block w-50" onsubmit="return false">
+					<div class="input-group mb-3">
+				    <input type="text" class="form-control" placeholder="Foo, bar">
+				    <div class="input-group-append">
+				    	<button class="btn p-0 add-new" onclick="post(this)">
+				      	<span class="input-group-text">+</span>
+				      </button>
+				    </div>
+				  </div>
+				</form>
+				<ul class="mb-0 mt-1 ml-2">
+				</ul>
 			</div>
 		</div> 
 		<div class="mb-3">
-			<button class="btn bg-success" data-toggle="collapse" data-target="#today"><h2 class="m-0">Today</h2></button>
+			<button class="btn bg-info" data-toggle="collapse"  data-target="#today"><h2 class="m-0">Today</h2></button>
 			<div id="today" class="collapse">
-				Im here)
+				<form class="my-2 ml-4 rounded d-block w-50" onsubmit="return false">
+					<div class="input-group mb-3">
+				    <input type="text" class="form-control" placeholder="Foo, bar">
+				    <div class="input-group-append">
+				    	<button class="btn p-0 add-new" onclick="post(this)">
+				      	<span class="input-group-text">+</span>
+				      </button>
+				    </div>
+				  </div>
+				</form>
+				<ul class="mb-0 mt-1 ml-2">
+				</ul>
+			</div>
+		</div> 
+		<div class="mb-3">
+			<button class="btn bg-info" data-toggle="collapse"  data-target="#week"><h2 class="m-0">Week</h2></button>
+			<div id="week" class="collapse">
+				<form class="my-2 ml-4 rounded d-block w-50" onsubmit="return false">
+					<div class="input-group mb-3">
+				    <input type="text" class="form-control" placeholder="Foo, bar">
+				    <div class="input-group-append">
+				    	<button class="btn p-0 add-new" onclick="post(this)">
+				      	<span class="input-group-text">+</span>
+				      </button>
+				    </div>
+				  </div>
+				</form>
+				<ul class="mb-0 mt-1 ml-2">
+				</ul>
+			</div>
+		</div> 
+		<div class="mb-3">
+			<button class="btn bg-info" data-toggle="collapse"  data-target="#month"><h2 class="m-0">Month</h2></button>
+			<div id="month" class="collapse">
+				<form class="my-2 ml-4 rounded d-block w-50" onsubmit="return false">
+					<div class="input-group mb-3">
+				    <input type="text" class="form-control" placeholder="Foo, bar">
+				    <div class="input-group-append">
+				    	<button class="btn p-0 add-new" onclick="post(this)">
+				      	<span class="input-group-text">+</span>
+				      </button>
+				    </div>
+				  </div>
+				</form>
+				<ul class="mb-0 mt-1 ml-2">
+				</ul>
 			</div>
 		</div>
+		<div class="mb-3">
+			<button class="btn bg-info" data-toggle="collapse"  data-target="#year"><h2 class="m-0">Year</h2></button>
+			<div id="year" class="collapse">
+				<form class="my-2 ml-4 rounded d-block w-50" onsubmit="return false">
+					<div class="input-group mb-3">
+				    <input type="text" class="form-control" placeholder="Foo, bar">
+				    <div class="input-group-append">
+				    	<button class="btn p-0 add-new" onclick="post(this)">
+				      	<span class="input-group-text">+</span>
+				      </button>
+				    </div>
+				  </div>
+				</form>
+				<ul class="mb-0 mt-1 ml-2">
+				</ul>
+			</div>
+		</div> 
 	</div>
 </body>
 </html>
